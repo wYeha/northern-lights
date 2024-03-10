@@ -1,0 +1,401 @@
+/* reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* inter-100 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100;
+  src: url('../fonts/inter-v13-latin-100.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inter-200 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 200;
+  src: url('../fonts/inter-v13-latin-200.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inter-300 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/inter-v13-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inter-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/inter-v13-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inter-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/inter-v13-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inter-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/inter-v13-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inter-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/inter-v13-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inter-800 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  src: url('../fonts/inter-v13-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inter-900 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/inter-v13-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* reset end */
+
+html{
+	box-sizing: border-box;
+}
+
+*, *::before, *::after{
+	box-sizing: inherit;
+}
+
+/* header start */
+
+.header__logo{
+  background: url(/img/svg/logo.svg);
+  width: 133px;
+  height: 51px;
+}
+
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.wrapper-header{
+  max-width: 1196px;
+  margin: 24px auto 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__nav{
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+
+.header__list{
+  display: flex;
+  gap: 48.7px;
+}
+
+.header__link{
+  text-align: center;
+  font-family: 'Inter';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 27px;
+  color: #848587;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+
+.header__link:hover{
+  color: #65E069;
+}
+
+.header__link.selected{
+  color: #000;
+  border-bottom: 1px solid;
+}
+
+/* header end */
+
+/* intro start */
+
+main{
+  background: url(/img/png/intro-pic-1920.png) no-repeat center;
+  height: 800px;
+  background-size: cover;
+  width: auto;
+}
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  max-width: 1196px;
+  margin: 0px auto 0 auto;
+  row-gap: 144px;
+}
+
+.intro-text_heading{
+  color: #000;
+  font-family: "Kolobov New Mexika";
+  font-size: 108px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90px;
+  margin-bottom: 74px;
+  
+}
+
+.experts {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+ 
+.experts::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 25px;
+  width: 356px;
+  height: 30px;
+  background: #C4FBB4;
+  z-index: -1;
+}
+
+.intro-text{
+  width: 546px;
+  padding: 194px 0 0 2px;
+  margin-bottom: 123px;
+}
+
+button{
+  border: 1px solid #000;
+  background: transparent;
+  padding: 9px 31px 8px 31px;
+  text-align: center;
+}
+
+.btn-text{
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+  font-size: 20px;
+  font-family: Inter;
+  color: #000;
+  text-decoration: none;
+}
+
+/* intro end */
+
+/* 2nd block start */
+
+.facts{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.facts-heading{
+  color: #000;
+  font-family: "Kolobov New Mexika";
+  font-size: 69px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 69px;
+  max-width: 664px; 
+}
+
+.facts-list{
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.fact{
+  display: flex;
+  flex-direction: column;
+  padding: 48px;
+  gap: 42px;
+  width: 100%;
+  border: 1px solid #000;
+}
+
+.fact-icon{
+  width: 60px;
+  height: 60px;
+}
+
+.fact-digit{
+  font-variant-numeric: lining-nums tabular-nums;
+  font-feature-settings: 'clig' off, 'liga' off;
+  color: #000;
+  font-family: "Kolobov New Mexika";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 48px;
+}
+
+.fact-desc{
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 31px; 
+}
+
+.fact.green{
+  background: #DAF9D1;
+  border: none;
+}
+
+/* 2nd block end */
+
+
+/* 3rd block start */
+
+
+
+.principles{
+	display: flex;
+	justify-content: space-between;
+	gap: 53px;
+}
+
+.principles-heading{
+
+}
+
+.principle1{
+	flex: 40.8%;
+}
+
+.principle2, .principle3{
+	flex: 25.1%;
+}
+
+.pr-pic-1{
+	height: 541px;
+	background: url(/img/png/principles1.png) no-repeat;
+	background-position: center;
+}
+
+.pr-pic-2{
+	height: 360px;
+	background: url(/img/png/principles2.png) no-repeat;
+	background-position: center;
+}
+
+.pr-pic-3{
+	height: 336px;
+	background: url(/img/png/principles3.png) no-repeat;
+	background-position: center;
+}
+
+.principle1, .principle2, .principle3{
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+
+.principle3{
+	align-self: end;
+}
+
+.pr-desc{
+	display: flex;
+	gap: 48px;
+	align-items: end;
+}
+
+.pr-text{
+	width: 100%;
+}
+
+.more{
+	text-decoration: none;
+}
+
+.more-link{
+	display: flex;
+	gap: 11px;
+	align-items: center;
+}
+
+.more-text, .pr-text{
+	font-family: Inter;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 133%;
+	color: #000;
+}
+
+/* 3rd block end */
+
